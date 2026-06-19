@@ -41,7 +41,7 @@ class AddonDialog(QDialog):
         self.path = None
         self.deck = None
         self.fields = {}
-        self.config_file = "export_decks_to_html_config.config"
+        self.config_file = f"{os.path.expanduser('~/Documents')}/export_decks_to_html_config.config"
         if os.path.exists(self.config_file):
             try:
                 self.config = load(open(self.config_file, 'rb'))
